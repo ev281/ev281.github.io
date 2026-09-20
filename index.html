@@ -3,10 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=Glow2.html">
   <title>Glow Naturals by Elizabeth</title>
 </head>
 <body>
   <p>Loading Glow Naturals by Elizabeth...</p>
+
+  <script>
+    fetch('Glow2.html')
+      .then(response => response.text())
+      .then(html => {
+        html = html.replace(/\$8\.00/g, '$10.00');
+        document.open();
+        document.write(html);
+        document.close();
+      });
+  </script>
 </body>
 </html>
